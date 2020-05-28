@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Anatherdictionary {
+public class Anatherdictionary extends Dictionary {
 	
-	private static Map<String, String> getText() {
+	public  Map<String, String> getText() {
 		// 可能会出现异常
 		try {
 		// 根据路径创建文件对象
@@ -36,15 +36,4 @@ public class Anatherdictionary {
 		return null;
 		}
 	
-	public String Search(String word) {
-
-		Map<String, String> dict = getText();
-
-		String ret = dict.get(word);
-
-		return(ret);
-
-
-		}
-
 }

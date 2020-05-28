@@ -18,8 +18,8 @@ public class Client extends JFrame implements ActionListener{
 	JButton confirm=new JButton("Search");
 	JTextField searchfield=new JTextField(30);
 	JTextArea information=new JTextArea(20,50);
-	Thedictionary dictionary=new Thedictionary();
-	Anatherdictionary dictionary1=new Anatherdictionary();
+	Dictionary dictionary1=new Thedictionary();
+	Dictionary dictionary2=new Anatherdictionary();
 	public 	Client() {
 		jframe.setLayout(new FlowLayout());
 		up.setLayout(new FlowLayout());
@@ -53,7 +53,7 @@ public class Client extends JFrame implements ActionListener{
 			
 			if(!word.equals("")) {
 				//String content=dictionary.Search(word);
-				String content=dictionary1.Search(word);
+				String content=dictionary2.Search(word);
 				if(content==null) {
 					information.setText("");
 					new Error();
